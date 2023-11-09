@@ -6,12 +6,9 @@
 
 int main(int argc, char *argv[])
 {
-	char src[] = "The worst things to eat before you sleep"; //문자열을 직접 설정했기 때문에 []안에 빈칸으로 두면 문자열에 맞춰서 자동으로 배정됨 
-	char dst[100];
+	char src[30] = "happy C programming"; //30글자는 아님  
 	
-	strcpy(dst, src); //이름만 심플하게 넣으면 된다.  
-	
-	printf("copied string : %s\n", dst);
+	printf("문자열 \"%s\" 의 길이: %i\n ", src, strlen(src));
 	
 	
 	system("PAUSE");
