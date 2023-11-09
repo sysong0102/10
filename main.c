@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+ 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	char str[4];
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	char src[] = "The worst things to eat before you sleep"; //문자열을 직접 설정했기 때문에 []안에 빈칸으로 두면 문자열에 맞춰서 자동으로 배정됨 
+	char dst[100];
 	
-	printf("%s\n", str);
+	strcpy(dst, src); //이름만 심플하게 넣으면 된다.  
 	
-	while (str[i] != '\0')
-	{
-		printf("%c", str[i]);//문자열이 맨끝에 도달하지 않을때까지 반복한다. 
-		i++;
-	}
+	printf("copied string : %s\n", dst);
+	
+	
 	system("PAUSE");
 	return 0;
 }
